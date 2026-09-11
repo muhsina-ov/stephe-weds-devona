@@ -1,0 +1,4 @@
+.git*
+wrangler.jsonc
+_headers
+README.md
