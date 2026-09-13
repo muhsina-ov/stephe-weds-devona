@@ -265,27 +265,6 @@ body::before {
   overflow: hidden;
 }
 
-/* Corner Flowers */
-.hero-flower {
-  position: absolute;
-  width: 115px;
-  height: auto;
-  pointer-events: none;
-  z-index: 2;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.08));
-}
-
-.flower-top-left {
-  top: 0;
-  left: 0;
-  transform: rotate(-5deg);
-}
-
-.flower-top-right {
-  top: 0;
-  right: 0;
-  transform: rotate(5deg) scaleX(-1);
-}
 
 .hero-content {
   position: relative;
@@ -448,9 +427,6 @@ body::before {
 }
 
 @media (max-width: 480px) {
-  .hero-flower {
-    width: 80px;
-  }
   .monogram-img {
     width: 115px;
   }
