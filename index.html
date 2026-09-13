@@ -76,42 +76,57 @@
     
     <!-- 1. HERO SECTION -->
     <section class="hero-section" id="cover">
-      <!-- Framed Swans Video Arched Showcase (Previous Design) -->
-      <div class="hero-swans-frame">
-        <video class="hero-swans-video" autoplay muted loop playsinline>
-          <source src="media/Swans2.mov" type="video/mp4" />
-        </video>
-        <img src="images/cdn/noroot_2.png" alt="" class="hero-corner-flower flower-left" />
-        <img src="images/cdn/noroot_3.png" alt="" class="hero-corner-flower flower-right" />
-      </div>
-
-      <div class="hero-content">
-        <!-- Uploaded SD Monogram Logo -->
-        <div class="monogram-box">
-          <img src="images/sd-logo.png" alt="Stephen &amp; Devona Monogram" class="monogram-img" />
+      <div class="hero-card-container">
+        
+        <!-- Centered Arched Video Background -->
+        <div class="hero-video-wrapper">
+          <video class="hero-video-element" autoplay muted loop playsinline>
+            <source src="media/Swans2.mov" type="video/mp4" />
+          </video>
+          <!-- Soft translucent parchment tint for legibility -->
+          <div class="hero-video-tint"></div>
+          
+          <!-- Corner floral sprays -->
+          <img src="images/cdn/noroot_2.png" alt="" class="hero-flower flower-top-left" />
+          <img src="images/cdn/noroot_3.png" alt="" class="hero-flower flower-top-right" />
         </div>
 
-        <div class="hero-the">The</div>
-        <h1 class="hero-beginning">Beginning</h1>
+        <!-- Content Layered Directly ON TOP of the Video -->
+        <div class="hero-overlay-content">
+          <!-- Uploaded SD Monogram Logo -->
+          <div class="monogram-box">
+            <img src="images/sd-logo.png" alt="Stephen &amp; Devona Monogram" class="monogram-img" />
+          </div>
 
-        <div class="hero-invitation-badge">
-          <span class="hero-badge-line"></span>
-          <span class="hero-badge-text">Wedding Invitation</span>
-          <span class="hero-badge-line"></span>
+          <div class="hero-badge-wrap">
+            <p class="hero-eyebrow">Holy Matrimony</p>
+            <p class="hero-date-top">07.10.2026</p>
+          </div>
+
+          <h1 class="hero-names">
+            Stephen <span class="hero-amp">&amp;</span> Devona
+          </h1>
+
+          <div class="hero-invitation-badge">
+            <span class="hero-badge-line"></span>
+            <span class="hero-badge-text">Wedding Invitation</span>
+            <span class="hero-badge-line"></span>
+          </div>
+
+          <div class="hero-details-pill">
+            <p class="hero-date-venue">
+              <strong>Wednesday, 7th October 2026</strong> &nbsp;•&nbsp; <span>Venue:</span> Malar Mahal, Mannargudi
+            </p>
+          </div>
+
+          <a href="#matrimony" class="scroll-indicator" aria-label="Scroll down to invitation">
+            <span>Scroll to Read</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
         </div>
 
-        <div class="hero-details-pill">
-          <p class="hero-date-venue">
-            <strong>7th October 2026</strong> — Wednesday &nbsp;•&nbsp; <span>Venue:</span> Malar Mahal, Mannargudi
-          </p>
-        </div>
-
-        <a href="#matrimony" class="scroll-indicator" aria-label="Scroll down to invitation">
-          <span>Scroll to Read</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-        </a>
       </div>
     </section>
 
