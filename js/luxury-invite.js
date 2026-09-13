@@ -132,6 +132,12 @@ document.addEventListener('DOMContentLoaded', () => {
         updateAudioUi(false);
       }
     });
+
+    audio.loop = true;
+    audio.addEventListener('ended', () => {
+      audio.currentTime = 0;
+      audio.play().catch(() => {});
+    });
   }
 
   // 3. Live Wedding Countdown to Oct 7, 2026, 10:00 AM IST
