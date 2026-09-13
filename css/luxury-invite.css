@@ -297,78 +297,72 @@ body::before {
   padding: 0;
 }
 
-/* Centered Portrait 9:16 Stage */
-.hero-stage {
+/* ==========================================================================
+   HERO COVER / ACCURATE VIDEO OVERLAY PRESENTATION
+   Seamless Video Canvas with Gold Calligraphy Layer
+   ========================================================================== */
+.hero-section {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  min-height: 100vh;
+  min-height: 100dvh;
   height: 100vh;
   height: 100dvh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  background-color: #FAF6F0;
   overflow: hidden;
-  box-shadow: 0 10px 50px rgba(74, 14, 23, 0.16);
-}
-
-@media (min-width: 501px) {
-  .hero-section {
-    padding: 20px 0;
-  }
-  .hero-stage {
-    border-radius: 14px;
-    height: 94vh;
-    max-height: 920px;
-    border: 1px solid rgba(166, 125, 43, 0.35);
-  }
+  padding: 0;
+  margin: 0;
 }
 
 /* Background Video Layer */
-.hero-video-container {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1;
-}
-
 .hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 30%;
+  z-index: 1;
+  pointer-events: none;
   display: block;
 }
 
 /* Subtle Dreamy Warm Tint to match reference and guarantee golden text contrast */
-.hero-vignette-overlay {
+.hero-video-overlay {
   position: absolute;
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  background: radial-gradient(circle at 50% 45%, rgba(250, 246, 240, 0.02) 0%, rgba(250, 246, 240, 0.14) 75%, rgba(220, 185, 120, 0.2) 100%);
+  background: radial-gradient(circle at 50% 50%, rgba(250, 246, 240, 0.04) 0%, rgba(250, 246, 240, 0.16) 70%, rgba(212, 175, 55, 0.22) 100%);
 }
 
-/* Upper Layer Overlay Contents */
-.hero-upper-layer {
+/* Upper Layer Overlay Contents: Positioned DIRECTLY ON TOP of Video */
+.hero-content {
   position: relative;
   z-index: 3;
   width: 100%;
+  max-width: 520px;
   height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: clamp(40px, 7.5vh, 65px) 20px clamp(28px, 5vh, 48px);
+  padding: clamp(45px, 8vh, 70px) 20px clamp(35px, 6vh, 50px);
   box-sizing: border-box;
   pointer-events: none;
 }
 
 /* Top Cluster: Wedding Day & Dove Date */
-.hero-top-cluster {
+.hero-top-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -384,12 +378,12 @@ body::before {
   line-height: 1;
   letter-spacing: 0.01em;
   text-shadow: 
-    0 1px 2px rgba(255, 255, 255, 0.9),
+    0 1px 2px rgba(255, 255, 255, 0.95),
     0 2px 8px rgba(166, 125, 43, 0.35);
   margin-bottom: 2px;
 }
 
-.hero-date-wrap {
+.hero-date-line {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -397,8 +391,10 @@ body::before {
 }
 
 .hero-dove-icon {
-  width: 21px;
-  height: 21px;
+  width: 20px;
+  height: 20px;
+  max-width: 20px;
+  max-height: 20px;
   display: inline-block;
   fill: #A67D2B;
   filter: drop-shadow(0 1px 2px rgba(255, 255, 255, 0.85)) drop-shadow(0 1px 3px rgba(166, 125, 43, 0.4));
@@ -412,12 +408,12 @@ body::before {
   color: #8C651F;
   letter-spacing: 0.12em;
   text-shadow: 
-    0 1px 2px rgba(255, 255, 255, 0.9),
+    0 1px 2px rgba(255, 255, 255, 0.95),
     0 2px 6px rgba(166, 125, 43, 0.25);
 }
 
-/* Center Cluster: Couple Names */
-.hero-names-cluster {
+/* Center Cluster: Formatted Groom & Bride Names */
+.hero-names-wrap {
   margin: auto 0;
   display: flex;
   flex-direction: column;
@@ -426,7 +422,7 @@ body::before {
   width: 100%;
 }
 
-.hero-couple-title {
+.hero-names-title {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -436,7 +432,8 @@ body::before {
   line-height: 1;
 }
 
-.hero-name-part {
+.hero-groom,
+.hero-bride {
   font-family: var(--font-script-names);
   font-size: clamp(3.8rem, 12vw, 5.8rem);
   font-weight: 400;
@@ -450,11 +447,12 @@ body::before {
   transition: transform 0.3s ease;
 }
 
-.hero-name-part:hover {
+.hero-groom:hover,
+.hero-bride:hover {
   transform: scale(1.03);
 }
 
-.hero-ampersand {
+.hero-amp {
   font-family: var(--font-script-title);
   font-size: clamp(2.2rem, 6.5vw, 3.2rem);
   font-weight: 400;
@@ -467,7 +465,7 @@ body::before {
 }
 
 /* Bottom Cluster: Scroll down */
-.hero-scroll-cluster {
+.hero-scroll-btn {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -479,12 +477,12 @@ body::before {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.hero-scroll-cluster:hover {
+.hero-scroll-btn:hover {
   opacity: 0.85;
   transform: translateY(3px);
 }
 
-.hero-scroll-caption {
+.hero-scroll-text {
   font-family: var(--font-script-title);
   font-size: clamp(1.8rem, 5.2vw, 2.5rem);
   font-weight: 400;
@@ -497,12 +495,23 @@ body::before {
     0 1px 5px rgba(166, 125, 43, 0.3);
 }
 
-.hero-chevron-arrow {
+.hero-chevron-icon {
   width: 22px;
   height: 14px;
+  max-width: 22px;
+  max-height: 14px;
   display: block;
   animation: heroChevronBounce 2s infinite ease-in-out;
   filter: drop-shadow(0 1px 2px rgba(255, 255, 255, 0.8)) drop-shadow(0 1px 4px rgba(166, 125, 43, 0.4));
+}
+
+@keyframes heroChevronBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
 }
 
 @keyframes heroChevronBounce {
