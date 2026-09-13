@@ -30,6 +30,8 @@
        AUDIO ELEMENT & CONTROLS
        ========================================== -->
   <audio id="weiAudio" loop preload="auto">
+    <source src="https://media.invitestory.in/wax-seal-royale/media/Einaudi_%20Divenire%20(1)%20(1).mp3" type="audio/mp3" />
+    <source src="media/Einaudi_%20Divenire%20(1)%20(1).mp3" type="audio/mp3" />
     <source src="media/bgm.mp3" type="audio/mp3" />
   </audio>
 
@@ -74,39 +76,52 @@
        ========================================== -->
   <main>
     
-    <!-- 1. HERO SECTION -->
+    <!-- 1. HERO SECTION (ACCURATE VIDEO OVERLAY) -->
     <section class="hero-section" id="cover">
-      <div class="hero-content">
-        <!-- Uploaded SD Monogram Logo -->
-        <div class="monogram-box">
-          <img src="images/sd-logo.png" alt="Stephen &amp; Devona Monogram" class="monogram-img" />
+      <div class="hero-stage">
+        
+        <!-- Background Video Layer -->
+        <div class="hero-video-container">
+          <video class="hero-bg-video" autoplay muted loop playsinline poster="media/swans_frame.jpg" id="heroBgVideo">
+            <source src="media/Swans2.mov" type="video/mp4" />
+            <source src="https://media.invitestory.in/wax-seal-royale/media/Swans2.mov" type="video/mp4" />
+          </video>
+          <!-- Subtle warm atmospheric vignette for crisp text contrast -->
+          <div class="hero-vignette-overlay"></div>
         </div>
 
-        <div class="hero-the">The</div>
-        <h1 class="hero-beginning">Beginning</h1>
+        <!-- Upper Layer Overlay Contents -->
+        <div class="hero-upper-layer">
+          
+          <!-- Top: "Wedding Day" & Date with Dove Silhouette -->
+          <div class="hero-top-cluster">
+            <div class="hero-wedding-day">Wedding Day</div>
+            <div class="hero-date-wrap">
+              <svg class="hero-dove-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <path fill="#A67D2B" d="M22 6.5c-1.2.6-2.5.9-3.8 1-.4-.8-1.1-1.5-2-1.9-1-.5-2.2-.6-3.3-.3-1.4.3-2.6 1.3-3.3 2.6-1 1.7-1 3.9-.2 5.7-.4.3-.9.7-1.3 1.2-2.2 2.2-3.7 4.8-4.4 7.8-.1.7.4 1.4 1.1 1.5.7.1 1.4-.4 1.5-1.1.6-2.5 2-4.7 3.8-6.5.5-.5 1.3-1 2.1-1.3.3 1 1 1.9 1.9 2.3 1.5.9 3.6.5 4.9-.6.5-.5 1-1.3 1.3-2.1.9-.3 1.7-.8 2.5-1.3.5-.4.8-1.3.4-1.9-.4-.5-1.3-.8-1.9-.4-.4.3-.9.5-1.3.8.1-.9 0-1.8-.3-2.7 1.5-.4 3-1.1 4.2-2.3.6-.6.6-1.4 0-2-.6-.5-1.4-.5-2 0z"/>
+              </svg>
+              <span class="hero-date-text">07.10.26</span>
+            </div>
+          </div>
 
-        <h2 class="hero-names">
-          Stephen <span class="hero-amp">&amp;</span> Devona
-        </h2>
+          <!-- Center: Couple Names in Flowing Calligraphy -->
+          <div class="hero-names-cluster">
+            <h1 class="hero-couple-title">
+              <span class="hero-name-part hero-name-groom">Stephen</span>
+              <span class="hero-ampersand">&amp;</span>
+              <span class="hero-name-part hero-name-bride">Devona</span>
+            </h1>
+          </div>
 
-        <div class="hero-invitation-badge">
-          <span class="hero-badge-line"></span>
-          <span class="hero-badge-text">Wedding Invitation</span>
-          <span class="hero-badge-line"></span>
+          <!-- Bottom: "Scroll down" with Animated Chevron Arrow -->
+          <a href="#matrimony" class="hero-scroll-cluster" aria-label="Scroll down to invitation">
+            <span class="hero-scroll-caption">Scroll down</span>
+            <svg class="hero-chevron-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.00 15.86" aria-hidden="true">
+              <path fill="none" stroke="#A67D2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M1.0092 1.008C4.3691 5.4431 9.1402 9.565 12.5 14C16.8007 9.565 19.6901 5.4431 23.9908 1.008"></path>
+            </svg>
+          </a>
+
         </div>
-
-        <div class="hero-details-pill">
-          <p class="hero-date-venue">
-            <strong>Wednesday, 7th October 2026</strong> &nbsp;•&nbsp; <span>Venue:</span> Malar Mahal, Mannargudi
-          </p>
-        </div>
-
-        <a href="#matrimony" class="scroll-indicator" aria-label="Scroll down to invitation">
-          <span>Scroll to Read</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-        </a>
       </div>
     </section>
 

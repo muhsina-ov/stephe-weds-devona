@@ -41,6 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
+    // Also start hero background video so it is ready immediately
+    const heroBgVideo = document.getElementById('heroBgVideo');
+    if (heroBgVideo) {
+      heroBgVideo.play().catch(() => {});
+    }
+
     // Play background music
     if (audio) {
       audio.volume = 0.85;
@@ -64,6 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       videoWrap.style.display = 'none';
     }, 1200);
+
+    // Ensure hero video is playing continuously
+    const heroBgVideo = document.getElementById('heroBgVideo');
+    if (heroBgVideo && heroBgVideo.paused) {
+      heroBgVideo.play().catch(() => {});
+    }
 
     // Show floating audio toggle button
     if (audioBtn) {
