@@ -501,8 +501,8 @@ body::before {
 .luxury-card {
   background: var(--bg-card);
   border: 1.5px solid var(--border-gold);
-  border-radius: 24px;
-  padding: 48px 32px;
+  border-radius: 28px;
+  padding: 44px 28px;
   box-shadow: var(--shadow-luxury);
   position: relative;
   width: 100%;
@@ -515,28 +515,44 @@ body::before {
   position: absolute;
   inset: 8px;
   border: 1px solid rgba(166, 125, 43, 0.35);
-  border-radius: 18px;
+  border-radius: 22px;
   pointer-events: none;
+}
+
+/* Top Scripture Verse on the Card */
+.card-header-verse {
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.card-verse-text {
+  font-family: var(--font-editorial);
+  font-size: clamp(0.88rem, 2.7vw, 1.02rem);
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  letter-spacing: 0.02em;
 }
 
 .matrimony-title {
   font-family: var(--font-calligraphy);
-  font-size: clamp(2.8rem, 8vw, 4.2rem);
-  color: var(--gold-primary);
+  font-size: clamp(3rem, 8.5vw, 4.5rem);
+  color: var(--gold-dark);
   line-height: 1.1;
-  margin-bottom: 24px;
-  text-shadow: 0 1px 4px rgba(166, 125, 43, 0.18);
+  margin-bottom: 22px;
+  text-shadow: 0 1px 3px rgba(122, 87, 24, 0.15);
 }
 
 .parents-block {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .parents-names {
   font-family: var(--font-editorial);
   font-size: clamp(1.05rem, 3.2vw, 1.3rem);
   font-weight: 600;
-  color: var(--burgundy);
+  font-style: italic;
+  color: #6B1724;
   line-height: 1.4;
   margin-bottom: 4px;
 }
@@ -555,16 +571,31 @@ body::before {
   color: var(--text-secondary);
   line-height: 1.7;
   max-width: 520px;
-  margin: 0 auto 30px;
+  margin: 0 auto 16px;
+}
+
+/* Golden Heart Flourish Dividers */
+.card-flourish-heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 0;
+}
+
+.card-flourish-heart svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--gold-primary);
+  opacity: 0.85;
 }
 
 /* ── Couple Presentation ── */
 .couple-showcase {
-  margin: 25px 0 35px;
+  margin: 18px 0 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 .person-card {
@@ -584,16 +615,18 @@ body::before {
 
 .person-name {
   font-family: var(--font-editorial);
-  font-size: clamp(1.35rem, 4.4vw, 1.75rem);
+  font-style: italic;
+  font-size: clamp(1.45rem, 4.6vw, 1.95rem);
   font-weight: 700;
-  color: var(--burgundy);
+  color: #A81C28;
   letter-spacing: 0.02em;
   margin-bottom: 4px;
 }
 
 .person-degrees {
   font-family: var(--font-sans);
-  font-size: clamp(0.75rem, 2.3vw, 0.88rem);
+  font-style: normal;
+  font-size: clamp(0.72rem, 2.2vw, 0.85rem);
   color: var(--gold-primary);
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -619,15 +652,25 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin: 6px 0;
+  gap: 14px;
+  margin: 4px 0;
 }
 
 .weds-text {
   font-family: var(--font-calligraphy);
-  font-size: clamp(2.2rem, 7vw, 3rem);
+  font-size: clamp(2.4rem, 7.5vw, 3.2rem);
   color: var(--gold-primary);
   line-height: 1;
+}
+
+.weds-flourish-wing {
+  width: 48px;
+  height: 16px;
+  overflow: visible;
+}
+
+.weds-flourish-wing.flip-h {
+  transform: scaleX(-1);
 }
 
 .weds-heart {
@@ -638,9 +681,23 @@ body::before {
 
 /* ── Date, Time & Officiants ── */
 .ceremony-details {
-  margin-top: 30px;
-  padding-top: 25px;
+  margin-top: 24px;
+  padding-top: 22px;
   border-top: 1px solid var(--border-gold);
+}
+
+/* Card Bottom Emblem (Entwined Laurel Hearts) */
+.card-bottom-emblem {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emblem-svg {
+  width: 160px;
+  height: 48px;
+  max-width: 100%;
 }
 
 .ceremony-time-text {
